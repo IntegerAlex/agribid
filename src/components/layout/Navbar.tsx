@@ -72,7 +72,7 @@ const Navbar = () => {
         scrolled ? "border-gray-200 bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-screen-xl items-center justify-between p-4">
+      <div className="flex w-full items-center justify-between px-0 py-4">
         <Link to="/" className="flex items-center space-x-3">
           <img src="/agribid.png" className="h-15 w-40" alt="Logo" />
         </Link>
@@ -109,6 +109,27 @@ const Navbar = () => {
               )}
             </div>
           ))}
+          {/* App Store and Play Store Images */}
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <img
+              src="/playstore.png"
+              alt="Google Play"
+              className="h-8 w-auto"
+            />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <img src="/appstore.png" alt="App Store" className="h-8 w-auto" />
+          </a>
         </div>
 
         {/* Mobile button placeholder */}
