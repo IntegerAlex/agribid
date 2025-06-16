@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@custom-variant dark (&:where(.dark, .dark *));
+.card-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  background-color: #0e2f19;
+  z-index: 0;
+  transition:
+    width 0.4s ease,
+    left 0.4s ease;
+  border-radius: inherit;
+}
+
+.card-hover:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.footer {
+  font-family: "Shadows Into Light", cursive;
+}
