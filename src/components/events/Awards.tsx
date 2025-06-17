@@ -108,8 +108,8 @@ const Awards = () => {
                 <div
                   key={index}
                   className="group animate-fade-in-up relative transform overflow-hidden rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-8 shadow-xl transition-all duration-500 ease-in-out hover:scale-[1.03] hover:shadow-2xl hover:ring-4 hover:ring-[var(--agriox-secondary)]"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
+                  // data-aos="fade-up"
+                  // data-aos-delay={index * 100}
                 >
                   <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-[var(--agriox-primary)]/5 to-[var(--agriox-secondary)]/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                   <img

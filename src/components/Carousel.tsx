@@ -40,7 +40,14 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div
+      className="relative h-screen w-full overflow-hidden"
+      // Define CSS variables here
+      style={{
+        "--color-base": colors.base,
+        "--color-primary": colors.primary,
+      }}
+    >
       {/* Image Slides with individual overlays */}
       {images.map((src, index) => (
         <div
@@ -86,7 +93,8 @@ const Carousel = () => {
         </h1>
         <button
           key={`button-${textKey}`}
-          className={`animate-fade-in-up rounded-md px-16 py-6 text-xl font-bold bg-[${colors.base}] text-[${colors.primary}] opacity-0 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-[${colors.primary}] hover:text-[${colors.base}]`}
+          // Use the CSS variables in your Tailwind classes
+          className="animate-fade-in-up rounded-md bg-[var(--color-base)] px-16 py-6 text-xl font-bold text-[var(--color-primary)] opacity-0 transition-all duration-300 hover:scale-105 hover:bg-[var(--color-primary)] hover:text-[var(--color-base)] hover:shadow-xl"
           style={{
             animationDelay: "0.9s",
             animationFillMode: "forwards",

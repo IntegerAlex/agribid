@@ -24,7 +24,7 @@ const FeatureGridItem: React.FC<FeatureGridItemProps> = ({
 }) => {
   return (
     <div
-      className="group animate-fade-in-up flex flex-col items-center rounded-lg bg-white/70 p-8 text-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 hover:shadow-xl"
+      className="group animate-fade-in-up flex translate-y-0 flex-col items-center rounded-lg bg-white/70 p-8 text-center opacity-100 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 hover:shadow-xl"
       style={{ animationDelay: `${delay * 100}ms` } as CustomCSSProperties}
     >
       <div
