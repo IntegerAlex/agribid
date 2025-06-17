@@ -44,11 +44,7 @@ const BlogSection = () => {
         {/* Left Panel */}
         <div className="lg:w-1/3">
           <div className="mb-6">
-            <img
-              src="/assets/images/resources/sec-title-icon1.png"
-              alt="Icon"
-              className="h-8"
-            />
+            <img src="/agribid.png" alt="Icon" className="h-8" />
           </div>
           <p
             className="mb-2 text-sm font-semibold uppercase"

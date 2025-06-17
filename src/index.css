@@ -28,3 +28,51 @@
 .footer {
   font-family: "Shadows Into Light", cursive;
 }
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+/* New class for button hover animation */
+.btn-hover-fill {
+  position: relative;
+  overflow: hidden;
+  z-index: 1; /* Ensure button text is above the pseudo-element */
+}
+
+.btn-hover-fill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(
+    --hover-bg-color,
+    #687469
+  ); /* Use a CSS variable for hover background */
+  transition: width 0.3s ease-in-out;
+  z-index: -1; /* Place behind button content */
+}
+
+.btn-hover-fill:hover::before {
+  width: 100%;
+}
+
+/* Define custom properties for colors to be used in CSS */
+:root {
+  --color-base: #f1cf69;
+  --color-primary: #334b35;
+  --color-accent: #687469;
+}

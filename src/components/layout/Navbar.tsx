@@ -17,7 +17,7 @@ const menuItems: MenuItem[] = [
       { label: "FPC Registration", to: "/partnerwithus/fpc" },
       { label: "DSA Registration", to: "/partnerwithus/dsa" },
       { label: "PACS Registration", to: "/partnerwithus/pacs" },
-      { label: "Partner Login", to: "/partnerwithus/partnerlogin" },
+      // { label: "Partner Login", to: "/partnerwithus/partnerlogin" },
       // { label: "Corporate Inquiries", to: "/corporate" },
     ],
   },
@@ -46,8 +46,16 @@ const menuItems: MenuItem[] = [
       },
     ],
   },
-  { label: "Register", to: "/registration" },
-  { label: "Login", to: "/login" },
+  // { label: "Register", to: "/registration" },
+  // { label: "Login", to: "/login" },
+  {
+    label: "Login",
+    children: [
+      { label: "Login", to: "/login" },
+      { label: "Register", to: "/registration" },
+      { label: "Partner Login", to: "/partnerwithus/partnerlogin" },
+    ],
+  },
   {
     label: "Language",
     children: [
@@ -68,13 +76,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-50 h-20 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 h-24 transition-all duration-300 ${
         scrolled ? "border-gray-200 bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="flex w-full items-center justify-between px-0 py-4">
+      <div className="flex w-full items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center space-x-3">
-          <img src="/agribid.png" className="h-15 w-40" alt="Logo" />
+          <img src="/agribid.png" className="h-20 w-48" alt="Logo" />
         </Link>
 
         {/* Desktop Menu */}
@@ -110,7 +118,7 @@ const Navbar = () => {
             </div>
           ))}
           {/* App Store and Play Store Images */}
-          <a
+          {/* <a
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -129,7 +137,7 @@ const Navbar = () => {
             className="flex items-center"
           >
             <img src="/appstore.png" alt="App Store" className="h-8 w-auto" />
-          </a>
+          </a> */}
         </div>
 
         {/* Mobile button placeholder */}

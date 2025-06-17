@@ -17,7 +17,7 @@ const ProjectCarousel = () => {
     <div className="container mx-auto px-4 py-12">
       <div className="mb-10 text-center">
         <div className="mb-3 inline-block">
-          <img src="https://via.placeholder.com/40" alt="icon" />
+          <img src="/agribid.png" alt="icon" className="h-20 w-48" />
         </div>
         <p className="text-sm tracking-wider text-green-600 uppercase">
           Recently completed work

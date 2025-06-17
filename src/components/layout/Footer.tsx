@@ -205,41 +205,87 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter */}
+          {/* App Store/Play Store and Newsletter Section */}
           <div style={{ flex: "1 1 300px" }}>
-            <h4 style={{ color: "#f1cf69", marginBottom: "16px" }}>
-              Newsletter
-            </h4>
-            <p style={{ marginBottom: "16px", color: "#cccccc" }}>
-              Sign up now to get daily latest news & updates from us.
-            </p>
-            <form style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-              <input
-                type="email"
-                placeholder="Email address"
-                style={{
-                  flex: "1 1 60%",
-                  padding: "10px",
-                  border: "none",
-                  borderRadius: "4px",
-                  fontSize: "14px",
-                }}
-              />
-              <button
-                type="submit"
-                style={{
-                  padding: "10px 20px",
-                  backgroundColor: "#f1cf69",
-                  color: "#334b35",
-                  border: "none",
-                  borderRadius: "4px",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                }}
+            {/* App Store and Play Store Images - Side by Side */}
+            <div
+              style={{
+                display: "flex",
+                gap: "15px",
+                marginBottom: "30px",
+                alignItems: "center",
+              }}
+            >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Play Store"
               >
-                Go
-              </button>
-            </form>
+                <img
+                  src="/playstore.png"
+                  alt="Google Play"
+                  style={{
+                    height: "40px",
+                    width: "auto",
+                    objectFit: "contain",
+                  }}
+                />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Apple App Store"
+              >
+                <img
+                  src="/appstore.png"
+                  alt="App Store"
+                  style={{
+                    height: "40px",
+                    width: "auto",
+                    objectFit: "contain",
+                  }}
+                />
+              </a>
+            </div>
+
+            {/* Newsletter */}
+            <div>
+              <h4 style={{ color: "#f1cf69", marginBottom: "16px" }}>
+                Newsletter
+              </h4>
+              <p style={{ marginBottom: "16px", color: "#cccccc" }}>
+                Sign up now to get daily latest news & updates from us.
+              </p>
+              <form style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  style={{
+                    flex: "1 1 60%",
+                    padding: "10px",
+                    border: "none",
+                    borderRadius: "4px",
+                    fontSize: "14px",
+                  }}
+                />
+                <button
+                  type="submit"
+                  style={{
+                    padding: "10px 20px",
+                    backgroundColor: "#f1cf69",
+                    color: "#334b35",
+                    border: "none",
+                    borderRadius: "4px",
+                    fontWeight: "bold",
+                    cursor: "pointer",
+                  }}
+                >
+                  Go
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

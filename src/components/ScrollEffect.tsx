@@ -1,21 +1,49 @@
 import React, { useState, useRef } from "react";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import VideoModal from "./VideoModal";
+import VideoListModal from "./VideoListModal";
 
 const ParallaxVideoSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showVideoListModal, setShowVideoListModal] = useState(false);
+  const [currentVideoUrl, setCurrentVideoUrl] = useState(
+    "https://www.youtube.com/embed/tYOFF1d8ttw?autoplay=1",
+  );
   const playButtonRef = useRef<HTMLAnchorElement>(null);
 
-  const handleOpenModal = () => {
+  const videos = [
+    {
+      title: "Female farmer from Darjeeling discovers a digital app..",
+      url: "https://www.youtube.com/embed/tYOFF1d8ttw?autoplay=1",
+    },
+    {
+      title: "Proud moment for AgriBid",
+      url: "https://www.youtube.com/embed/F-h8mG-2hP8?autoplay=1",
+    },
+    {
+      title: "Agribid KisanBiz show 2022",
+      url: "https://www.youtube.com/embed/CZaV28g7vik?autoplay=1",
+    },
+  ];
+
+  const handleOpenVideoListModal = () => {
+    setShowVideoListModal(true);
+  };
+
+  const handleCloseVideoListModal = () => {
+    setShowVideoListModal(false);
+  };
+
+  const handleVideoSelect = (videoUrl: string) => {
+    setCurrentVideoUrl(videoUrl);
+    setShowVideoListModal(false);
     setIsModalOpen(true);
   };
 
-  const handleCloseModal = () => {
+  const handleCloseVideoModal = () => {
     setIsModalOpen(false);
     playButtonRef.current?.focus();
   };
-
-  const videoUrl = "https://www.youtube.com/embed/tYOFF1d8ttw?autoplay=1";
 
   return (
     <ParallaxProvider>
@@ -42,6 +70,7 @@ const ParallaxVideoSection = () => {
                   </h2>
                   <a
                     href="#"
+                    onClick={handleOpenVideoListModal}
                     className="inline-block rounded bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700"
                   >
                     Discover more
@@ -59,7 +88,7 @@ const ParallaxVideoSection = () => {
                     {/* Play Button */}
                     <a
                       href="#"
-                      onClick={handleOpenModal}
+                      onClick={() => handleVideoSelect(videos[0].url)}
                       ref={playButtonRef}
                       className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full border-4 border-white transition hover:scale-105"
                     >
@@ -82,8 +111,14 @@ const ParallaxVideoSection = () => {
       </section>
       <VideoModal
         isOpen={isModalOpen}
-        onClose={handleCloseModal}
-        videoUrl={videoUrl}
+        onClose={handleCloseVideoModal}
+        videoUrl={currentVideoUrl}
+      />
+      <VideoListModal
+        isOpen={showVideoListModal}
+        onClose={handleCloseVideoListModal}
+        videos={videos}
+        onVideoSelect={handleVideoSelect}
       />
     </ParallaxProvider>
   );
