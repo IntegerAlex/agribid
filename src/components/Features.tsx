@@ -5,28 +5,30 @@ import {
   FaTruck,
   FaCertificate,
   FaPhoneAlt,
+  FaMoneyBillWave,
+  FaTractor,
 } from "react-icons/fa";
 
 const features = [
   {
     icon: <FaSeedling />,
-    title: "Quality Organic Food",
-    description: "Top-tier organic produce for a healthier lifestyle.",
+    title: "Quality",
+    description: "Quality produce for a healthier lifestyle.",
   },
   {
     icon: <FaUsers />,
-    title: "Professional Staff",
-    description: "Experienced team supporting sustainable farming.",
+    title: "Training",
+    description: "Training for sustainable farming.",
   },
   {
-    icon: <FaTruck />,
-    title: "Timely Delivery",
-    description: "Ensuring freshness with on-time delivery.",
+    icon: <FaMoneyBillWave />,
+    title: "Financing",
+    description: "Financing options for your farming needs.",
   },
   {
-    icon: <FaCertificate />,
-    title: "Certified Quality",
-    description: "Products meeting high certification standards.",
+    icon: <FaTractor />,
+    title: "Soil Testing",
+    description: "Soil testing to ensure the best possible growth.",
   },
 ];
 
@@ -63,26 +65,26 @@ const FeaturesTwo = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 flex flex-col items-center gap-6 rounded-xl bg-white p-8 shadow-md sm:flex-row sm:justify-between sm:gap-12">
-          <div className="flex items-center gap-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white">
+        {/* <div className="mt-20 flex flex-col items-center gap-6 rounded-xl bg-white p-8 shadow-md sm:flex-row sm:justify-between sm:gap-12"> */}
+        {/* <div className="flex items-center gap-4">
+             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white">
               <FaPhoneAlt />
-            </div>
+            </div> 
             <img
               src="assets/images/resources/features-v2-call-box-img.jpg"
               alt="Farmers"
               className="h-16 w-16 rounded-full object-cover"
             />
-          </div>
-          <div className="text-center sm:text-left">
+          </div> */}
+        {/* <div className="text-center sm:text-left">
             <p className="text-sm font-medium text-green-700">
               We Grow with Love
             </p>
             <h2 className="text-2xl font-bold text-gray-800">
               Our farmers grow the healthiest products
             </h2>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
     </section>
   );

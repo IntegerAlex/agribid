@@ -10,19 +10,19 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%;
-  width: 0;
-  background-color: #0e2f19;
+  left: 0;
+  width: 100%;
+  background-color: rgba(14, 47, 25, 0);
   z-index: 0;
-  transition:
-    width 0.4s ease,
-    left 0.4s ease;
+  transition: all 0.4s ease;
   border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: center;
 }
 
 .card-hover:hover::before {
-  width: 100%;
-  left: 0;
+  transform: scaleX(1);
+  background-color: rgba(14, 47, 25, 0.8);
 }
 
 .footer {
@@ -75,4 +75,78 @@
   --color-base: #f1cf69;
   --color-primary: #334b35;
   --color-accent: #687469;
+}
+
+/* About Two Section - Image Box Styles */
+.about-two__img-box {
+  position: relative;
+  min-height: 500px; /* Adjusted min-height to fit the composition */
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-two__img-box-img1 {
+  position: absolute;
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 70%; /* Smaller than img2 */
+  height: 70%;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.about-two__img-box-img1-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-two__img-box-img2 {
+  position: absolute;
+  bottom: 0; /* Align to bottom */
+  right: 0; /* Align to right */
+  width: 80%; /* Larger to overlap img1 */
+  height: 80%;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.about-two__img-box-img2-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-two__img-box-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.about-two__img-box-shape1 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+  background-color: #334b35;
+  border-radius: 0.5rem;
+  transform: rotate(45deg);
+  z-index: 4;
+}
+
+.about-two__img-box-shape2 {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 50px;
+  height: 50px;
+  background-color: #f1cf69;
+  border-radius: 0.25rem;
+  transform: rotate(-30deg);
+  z-index: 4;
 }

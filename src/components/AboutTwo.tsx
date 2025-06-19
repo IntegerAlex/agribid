@@ -1,67 +1,15 @@
-import React, { useState } from "react";
-
-const LazyImage = ({
-  src,
-  alt,
-  className,
-}: {
-  src: string;
-  alt: string;
-  className: string;
-}) => {
-  const [loaded, setLoaded] = useState(false);
-
-  return (
-    <div
-      className={`relative overflow-hidden bg-gray-200 ${className}`}
-      style={{ minHeight: "150px" }}
-    >
-      {!loaded && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <svg
-            className="h-8 w-8 animate-spin text-gray-400"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-            ></circle>
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8v8z"
-            ></path>
-          </svg>
-        </div>
-      )}
-      <img
-        src={src}
-        alt={alt}
-        onLoad={() => setLoaded(true)}
-        className={`h-auto w-full transition-opacity duration-500 ${
-          loaded ? "opacity-100" : "opacity-0"
-        }`}
-        loading="lazy"
-      />
-    </div>
-  );
-};
+import React from "react";
 
 const AboutTwo = () => {
   return (
     <section className="about-two relative">
       <div className="about-two__bg absolute inset-0 -z-10">
-        <LazyImage
-          src="assets/images/backgrounds/about-v2-bg.png"
+        {/* <img
+          src="assets/images/backgrounds/about-v2-bg.webp"
           alt="Background"
           className="h-full w-full object-cover"
-        />
+          loading="lazy"
+        /> */}
       </div>
       <div className="container mx-auto px-4">
         <div className="row flex flex-wrap">
@@ -71,30 +19,44 @@ const AboutTwo = () => {
               <div className="about-two__img-box__shape"></div>
               <div className="about-two__img-box-img1 mb-6">
                 <div className="about-two__img-box-img1-inner">
-                  <LazyImage
-                    src="assets/images/about/about-v2-img1.jpg"
+                  <img
+                    src="/about-v2-img1.webp"
                     alt="About Image 1"
                     className="rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
               <div className="about-two__img-box-img2 relative">
                 <div className="about-two__img-box-img2__shape"></div>
                 <div className="logo mb-4">
-                  <LazyImage
-                    src="assets/images/resources/about-v2-logo.png"
+                  <img
+                    src="assets/images/resources/about-v2-logo.webp"
                     alt="Logo"
                     className="mx-auto w-32"
+                    loading="lazy"
                   />
                 </div>
                 <div className="about-two__img-box-img2-inner">
-                  <LazyImage
-                    src="assets/images/about/about-v2-img2.jpg"
+                  <img
+                    src="/about-v2-img2.webp"
                     alt="About Image 2"
                     className="rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               </div>
+              {/* Organic Badge */}
+              <div className="about-two__img-box-badge absolute">
+                <img
+                  src="/about-v2-logo.webp"
+                  alt="Organic Badge"
+                  className="h-28 w-28 object-contain"
+                />
+              </div>
+              {/* Decorative shapes */}
+              <div className="about-two__img-box-shape1 absolute bg-green-700"></div>
+              <div className="about-two__img-box-shape2 absolute bg-yellow-400"></div>
             </div>
           </div>
           {/* End About Two Img Box */}
@@ -104,10 +66,11 @@ const AboutTwo = () => {
             <div className="about-two__content-box">
               <div className="sec-title mb-8 text-center lg:text-left">
                 <div className="icon mb-3 inline-block">
-                  <LazyImage
-                    src="assets/images/resources/sec-title-icon1.png"
+                  <img
+                    src="assets/images/resources/sec-title-icon1.webp"
                     alt="Section Icon"
                     className="h-10 w-10"
+                    loading="lazy"
                   />
                 </div>
                 <span className="sec-title__tagline mb-2 block font-semibold tracking-wide text-yellow-500 uppercase">
