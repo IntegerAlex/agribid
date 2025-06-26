@@ -191,6 +191,14 @@ const Footer = () => {
                     label: "Shipping Policy",
                     href: "/shippingpolicy",
                   },
+                  {
+                    label: "FAQ",
+                    href: "/faq",
+                  },
+                  {
+                    label: "Knowledge Center",
+                    href: "/knowledgecenter",
+                  },
                 ].map((item, idx) => (
                   <li key={idx} style={{ marginBottom: "10px" }}>
                     <a
