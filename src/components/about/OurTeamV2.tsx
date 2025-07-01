@@ -25,21 +25,21 @@ const TeamV2 = () => {
       name: "MANOJ SUVARNA",
       title: "Co-Founder",
       description:
-        "An adept Co-Founder, Manoj holds an SMP from IIM Calcutta and an MBA from Welingkar. His illustrious journey includes stints at REFCO, MAN Financial, Anand Rathi, Reliance Commodities, and Inditrade. With over 20 years of experience in financial markets and agri commodities, Manoj\'s expertise shines through",
+        "A seasoned expert with over 20 years in financial markets and agri-commodities. Manoj's strategic leadership, honed at firms like Reliance and Inditrade, shapes our market approach.",
       imageUrl: "/team/MS.jpg", // Example image path
     },
     {
       name: "ASHUTOSH MISHRA",
       title: "Co-Founder",
       description:
-        "A Co-Founder with an unwavering commitment, Ashutosh an alumni of the prestigious BHU holds an MBA and a BSc in Agriculture from BHU. His distinguished career journey comprises impactful roles at CDSL, ICICI Direct, and Reliance Capital, where he amassed 20 years of experience in financial markets and agri commodities.",
+        "An agriculture specialist and MBA from BHU, Ashutosh brings 20 years of experience from financial giants like ICICI Direct and Reliance Capital. He bridges the gap between agricultural science and market dynamics.",
       imageUrl: "/team/AM.jpg", // Example image path
     },
     {
       name: "CHETAN SUVARNA",
       title: "Co-Founder",
       description:
-        "Another trailblazing Co-Founder, Chetan\'s journey has encompassed pivotal roles at Yes Bank, Reliance Commodities, Reliance Communications, and Inditrade. With an MBA and a B.Com from CSJM, his 15-year expertise in financial markets and agri commodities adds immense value.",
+        "With 15 years of expertise from key positions at Yes Bank and Reliance, Chetan is a driving force in our financial and commodity operations. His innovative approach adds immense value to our team.",
       imageUrl: "/team/CS.jpg", // Example image path
     },
   ];
@@ -49,30 +49,30 @@ const TeamV2 = () => {
       name: "Smt. Latha Rajinikanth",
       title: "Advisory Board Member",
       description:
-        "Smt. Latha Rajinikanth is a devoted advocate for the underprivileged, especially children and agricultural communities. Born to a culturally rich family, she is the wife of global icon Superstar Rajinikanth and a proud mother of two accomplished daughters.",
+        "A passionate philanthropist and cultural icon, Smt. Latha Rajinikanth champions community upliftment and sustainable agriculture through her influential leadership and advocacy.",
       fullDescription:
-        "A multi-talented artist, Latha ji has inspired youth through initiatives like \'Dayaa 2000\' and celebrated her husband\'s career with landmark productions. Beyond the arts, she empowers farmers through workshops and sustainable practices, emphasizing agriculture\'s vital role. Her guiding principle, \"Don\'t talk About Change, be The Change Maker,\" encapsulates her passionate commitment to compassion, cultural revival, and community upliftment through her Esteemed Organisation \"Bharat Seva\"",
+        "A multi-talented artist, Latha ji has inspired youth through initiatives like 'Dayaa 2000' and celebrated her husband's career with landmark productions. Beyond the arts, she empowers farmers through workshops and sustainable practices, emphasizing agriculture's vital role. Her guiding principle, \"Don't talk About Change, be The Change Maker,\" encapsulates her passionate commitment to compassion, cultural revival, and community upliftment through her Esteemed Organisation \"Bharat Seva\"",
       imageUrl: "/team/lataR.jpg", // Example image path
     },
     {
       name: "VIVEK OBEROI",
       title: "Actor | Investor | Chief Strategy Advisor",
       description:
-        "Educationist and a renowned celebrity. He is a director: swarrnim startup & innovation university, gujarat, And an active partner in the education eco-system & education hub creation.",
+        "A renowned actor, investor, and educationist. As our Chief Strategy Advisor, Vivek brings invaluable insight into innovation, startups, and large-scale ecosystem development.",
       imageUrl: "/team/viveko.jpg", // Example image path
     },
     {
       name: "ASHOK NARAYANAN",
       title: "Founder and Director of Orion Group",
       description:
-        "A post-graduate from the Indian Institute of Foreign Trade, class of 85. 35 years of experience in International trade of Agri-Commodities",
+        "A veteran of international trade with 35 years of specialized experience in agri-commodities. Ashok's deep industry knowledge guides our global trading strategies.",
       imageUrl: "/team/Ashok-Narayanan_01.jpg", // Example image path
     },
     {
       name: "SRIDHAR RAMANI",
       title: "Director",
       description:
-        "A diverse and illustrious career path, starting from N.T.T.F, Shriram Fibres and Ministry of Defence Production. Lends his expertise to companies such as M/s. Vassman and M/s. Reep Automobiles, particularly in the electric vehicle (EV) segment. Throughout his career, he demonstrated proficiency as a Financial Analyst, accruing invaluable experience in P.E closure.",
+        "A versatile director with a diverse background in technology, finance, and EV sectors. Sridhar provides critical expertise in financial analysis and private equity.",
       imageUrl: "/team/Sridhar Ramani.png", // Example image path
     },
     {
@@ -80,21 +80,21 @@ const TeamV2 = () => {
       title:
         "Editor | Tarun Bharat | Director | Lokmanya Multipurpose Co. Op. Society Ltd.",
       description:
-        "15 yrs of experience in Media, Finance, Commodity Trading and Logistics.",
+        "An influential Director and Editor with 15 years of cross-functional experience in media, finance, and logistics. Prasad's expertise shapes our communication and operational strategies.",
       imageUrl: "/team/Prasad Thakur.jpg", // Example image path
     },
     {
       name: "PRADEEP LOKHANDE",
       title: "Founder Rural Relations",
       description:
-        "Founder Rural Relations, which has the largest rural network covering 2/3rd of India\'s rural population. Facilitating customized marketing efforts of a diverse range of industries, ranging from local brands to multinationals through a unique relationship-building approach.",
+        "As the founder of Rural Relations, Pradeep is a master of grassroots engagement. His unparalleled network and relationship-building approach drive our rural marketing and outreach efforts.",
       imageUrl: "/team/Pradeep Lokhande.jpg", // Example image path
     },
     {
       name: "RAHUL SANGAMLAL GUPTA",
       title: "Director & Co-Founder",
       description:
-        "MBA & MEM (University of Sydney, Australia), B.E. Civil Engineering (Mumbai University). Director - Sangam International School, Co-Founder/ Managing Director - Dhanraji Infra Pvt Ltd, Director - Bestbrew Alcobev Pvt Ltd, Proprietor - Shri Sangam Filling Station",
+        "A dynamic entrepreneur with leadership roles across infrastructure, education, and business. Rahul's diverse experience as a Director and Co-Founder brings a unique, multi-industry perspective to our board.",
       imageUrl: "/team/Rahul_Gupta.jpeg", // Example image path
     },
   ];
@@ -103,14 +103,15 @@ const TeamV2 = () => {
     {
       name: "Pranav Bhaskaran",
       title: "Chartered Accountant",
-      description: "Pranav Bhaskar & associates, Chartered Accountant",
+      description:
+        "A seasoned Chartered Accountant from Pranav Bhaskar & Associates, providing expert financial and compliance guidance.",
       imageUrl: "/team/Pranav Bhaskaran.jpg", // Example image path
     },
     {
       name: "Chitrasen Singh",
       title: "Advertising & Marketing",
       description:
-        "MBA BHU | BSc Purvanchal University. Ex MBPL | Jagran Prakashan| Sun Group |Bhaskar | Business Standard. 20 Year of experience in Advertising and Marketing",
+        "A marketing veteran with 20 years of experience at media giants like Jagran Prakashan and Dainik Bhaskar. Chitrasen spearheads our advertising and marketing strategy.",
       imageUrl: "/team/Chitrasen-Singh_01.jpg", // Example image path
     },
   ];

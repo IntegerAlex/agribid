@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import HeroSection from "@/components/about/HeroSection";
 import FeatureGridItem from "@/components/about/FeatureGridItem";
-import { Flag, Eye, Heart, Leaf, Users } from "lucide-react";
+import { Flag, Eye, Heart, Users } from "lucide-react";
 
 // Define a custom interface to extend React.CSSProperties
 interface CustomCSSProperties extends React.CSSProperties {
@@ -27,31 +27,25 @@ const featureData = [
     icon: Flag,
     title: "Our Mission",
     description:
-      "Our mission at Agribid is to empower farmers and stakeholders across the agricultural value chain with a technologically advanced platform that enhances accessibility, efficiency, and profitability. We aim to bridge the gap between producers and buyers, providing a robust marketplace that drives sustainable growth, promotes fair pricing, and ensures food security for all.",
+      "Empowering Farmers. Digitizing Agriculture. Transforming Rural India with AI. At Agribid Private Limited, our mission is to bridge the gap between Indian farmers and markets by building a transparent, AI-powered digital agriculture ecosystem. We are committed to empowering smallholder farmers, FPOs, PACS, and agri stakeholders with intelligent tools and inclusive innovations. Our goal is to build a scalable Agritouch platform that ensures fair trade, timely payments, and sustainable income growth for millions of farmers across India—powered by technology, grounded in trust.",
   },
   {
     icon: Eye,
     title: "Our Vision",
     description:
-      "To redefine agriculture with technology, cultivating a world where farmers thrive, trade flourishes, and food security is a global reality.",
+      "To Be India’s Most Trusted AI-Powered Digital Agritech (Agritouch) Platform. Our vision is to transform Indian agriculture through artificial intelligence, data connectivity, and financial inclusion. We imagine a future where every Indian farmer—regardless of land size or location—can thrive with access to a self-sustaining digital ecosystem built on trust, technology, and inclusivity. By combining deep rural outreach with continuous AI innovation, Agribid aims to lead India’s agricultural transformation—fueling farmer prosperity and national food security.",
   },
   {
     icon: Heart,
     title: "The Purpose That Fuels Us",
     description:
-      "Agribid's overarching aim is to make a resounding social impact by simplifying, accelerating, and enhancing the transparency of agricultural transactions. We envisioned a digital marketplace that would usher in a new era of simplicity, speed, and clarity within the realm of agriculture.",
-  },
-  {
-    icon: Leaf,
-    title: "Empowering Farmers and Transforming Lives",
-    description:
-      "Our core purpose revolves around constructing an integrated B2B platform, seamlessly bridging the gap between farmers and a broader local and global market. Our grand vision is to empower farmers by enabling them to vend their produce at the farm gate, reducing intermediary involvement, and ushering in digital payments.",
+      "At Agribid, our purpose is to blend AI-powered innovation with grassroots empowerment, ensuring that every Indian farmer benefits from a smarter, fairer, and more inclusive agri-value chain. We focus on Empowerment, Transparency, Inclusivity, and Innovation. Empowering Farmers and Transforming Lives—through AI, trust, and Agritouch.",
   },
   {
     icon: Users,
     title: "The Team: A Force of Change",
     description:
-      "Today, Agribid thrives with a dedicated team of 40 individuals (and growing), each contributing to our shared mission of revolutionizing agriculture. But our impact doesn't stop at our platform. Through a robust partner network, we've seeded village-level entrepreneurs across four states, igniting employment opportunities in remote rural pockets.",
+      "At our core, we are a passionate team of agritech innovators, AI integrators, trade professionals, and logistics experts, working to uplift the livelihoods of India’s farming community through technology and trust. Our leadership, core team, and national field presence are rooted in compassion, collaboration, and AI-powered empowerment—driven by one shared vision: a digitally connected, prosperous future for Indian agriculture.",
   },
 ];
 
@@ -91,35 +85,43 @@ function WhoAreWeComponent() {
 
       <div className="animate-fade-in-up-slow relative z-10 mx-auto max-w-6xl rounded-lg bg-white/80 p-8 text-center shadow-lg backdrop-blur-sm lg:p-12">
         <HeroSection
-          title="ABOUT US"
-          content="In the midst of October 2020, Agribid took its first step towards reshaping the landscape of agriculture. Behind this innovative endeavor were three remarkable visionaries who believed in harnessing technology to forge connections and catalyze change within the farming community."
+          title="ABOUT US / Who we are"
+          content="Founded in 2020 and headquartered in Mumbai, Agribid Private Limited is India’s pioneering Agritouch company, dedicated to transforming Indian agriculture through AI-powered, inclusive, and sustainable innovations. We combine advanced technologies like artificial intelligence, satellite data, and IoT with deep rural engagement, ensuring that farmers, FPOs, PACS, and agri stakeholders benefit from smarter decisions, better prices, and seamless market access."
         />
 
-        <div className="my-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="my-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
           {featureData.map((feature, index) => (
             <FeatureGridItem
               key={index}
               icon={feature.icon}
               title={feature.title}
               description={feature.description}
-              delay={index + 3} // Stagger delay for animation
+              delay={index + 3}
             />
           ))}
         </div>
 
+        <h3
+          className="animate-fade-in-up mb-4 text-2xl font-bold text-[var(--agriox-primary)]"
+          style={
+            {
+              animationDelay: `${(featureData.length + 1) * 100}ms`,
+            } as CustomCSSProperties
+          }
+        >
+          Our mission is clear:
+        </h3>
         <p
           className="animate-fade-in-up mb-8 text-lg leading-relaxed font-[var(--agriox-font)] text-[var(--agriox-color-1)]"
           style={
             {
-              animationDelay: `${(featureData.length + 4) * 100}ms`,
+              animationDelay: `${(featureData.length + 2) * 100}ms`,
             } as CustomCSSProperties
           }
         >
-          As we journey forward, Agribid is not merely a marketplace. It's a
-          testament to innovation, an ode to empowerment, and a celebration of
-          unity within the farming community. Every transaction, every
-          connection, and every digital payment echoes our commitment to
-          cultivating a brighter future for farmers, one click at a time.
+          To digitally uplift Indian agriculture while staying rooted in
+          empathy, transparency, and farmer-first innovation—touching lives at
+          every step of the value chain.
         </p>
       </div>
     </div>

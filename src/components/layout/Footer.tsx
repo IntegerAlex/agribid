@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@tanstack/react-router";
 import {
   Facebook,
   Twitter,
@@ -8,293 +9,201 @@ import {
   Mail,
 } from "lucide-react";
 
+const usefulLinks1 = [
+  { label: "Home", to: "/" },
+  { label: "FPO", to: "/partnerwithus/fpo" },
+  { label: "Market Place", to: "/market" },
+  { label: "About Us", to: "/about/whoarewe" },
+  { label: "Mandi Price", to: "/mandi" },
+];
+
+const usefulLinks2 = [
+  { label: "Privacy Policy", to: "/privacypolicy" },
+  { label: "T & C", to: "/termsandcondition" },
+  { label: "Return Policy", to: "/returnpolicy" },
+  { label: "Shipping Policy", to: "/shippingpolicy" },
+  { label: "FAQ", to: "/faq" },
+  { label: "Knowledge Center", to: "/knowledgecenter" },
+];
+
 const Footer = () => {
   return (
-    <footer
-      style={{
-        backgroundColor: "#334b35",
-        color: "#ffffff",
-      }}
-      className="font-agriox"
-    >
-      <div
-        className="footer-container"
-        style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "60px 20px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            gap: "2rem",
-          }}
-        >
+    <footer className="font-agriox bg-[#334b35] text-white">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Logo + About */}
-          <div style={{ flex: "1 1 250px" }}>
-            <div style={{ marginBottom: "20px" }}>
-              <div style={{ marginBottom: "16px" }}>
+          <div className="lg:col-span-1">
+            <div className="mb-5">
+              <Link
+                to="/"
+                className="inline-block rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+              >
                 <img
                   src="/agribid.png"
                   alt="AgriBid Logo"
-                  style={{
-                    width: "140px",
-                    height: "40px",
-                    borderRadius: "4px",
-                    backgroundColor: "#f1cf69",
-                    padding: "5px",
-                  }}
+                  className="h-12 w-auto rounded-md bg-[#f1cf69] p-1.5"
                 />
-              </div>
-              <h4 style={{ color: "#f1cf69", marginBottom: "8px" }}>
-                Corporate Office
-              </h4>
-              <p style={{ color: "#dddddd", marginBottom: "12px" }}>
-                Agribid Private Limited,
-                <br /> B-204 Kanakia Wall Street Chakala,
-                <br /> Andheri (E) Mumbai - 400093
+              </Link>
+            </div>
+            <h4 className="mb-2 text-[#f1cf69]">Corporate Office</h4>
+            <p className="mb-3 text-gray-300">
+              Agribid Private Limited,
+              <br /> B-204 Kanakia Wall Street Chakala,
+              <br /> Andheri (E) Mumbai - 400093
+            </p>
+            <div className="mt-5 space-y-2 text-sm">
+              <p className="flex items-center">
+                <Phone size={16} className="mr-2" />
+                <a
+                  href="tel:02269719417"
+                  className="text-[#f1cf69] hover:underline focus:underline focus:outline-none"
+                >
+                  022 6971 9417
+                </a>
               </p>
-              <div style={{ marginTop: "20px", fontSize: "14px" }}>
-                <p
-                  style={{
-                    margin: "8px 0",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
+              <p className="flex items-center">
+                <Mail size={16} className="mr-2" />
+                <a
+                  href="mailto:support@agribidindia.com"
+                  className="text-[#f1cf69] hover:underline focus:underline focus:outline-none"
                 >
-                  <Phone size={16} style={{ marginRight: 8 }} />
-                  <a
-                    href="tel:02269719417"
-                    style={{ color: "#f1cf69", textDecoration: "none" }}
-                  >
-                    022 6971 9417
-                  </a>
-                </p>
-                <p
-                  style={{
-                    margin: "8px 0",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <Mail size={16} style={{ marginRight: 8 }} />
-                  <a
-                    href="mailto:support@agribidindia.com"
-                    style={{ color: "#f1cf69", textDecoration: "none" }}
-                  >
-                    support@agribidindia.com
-                  </a>
-                </p>
-              </div>
-              {/* Social Media Icons */}
-              <div style={{ marginTop: "20px", display: "flex", gap: "15px" }}>
-                <a href="#" style={{ color: "#f1cf69" }} aria-label="Facebook">
-                  <Facebook size={24} />
+                  support@agribidindia.com
                 </a>
-                <a href="#" style={{ color: "#f1cf69" }} aria-label="Twitter">
-                  <Twitter size={24} />
-                </a>
-                <a href="#" style={{ color: "#f1cf69" }} aria-label="Instagram">
-                  <Instagram size={24} />
-                </a>
-                <a href="#" style={{ color: "#f1cf69" }} aria-label="LinkedIn">
-                  <Linkedin size={24} />
-                </a>
-              </div>
+              </p>
+            </div>
+            <div className="mt-5 flex space-x-4">
+              <a
+                href="#"
+                className="rounded-md text-[#f1cf69] hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+                aria-label="Facebook"
+              >
+                <Facebook size={24} />
+              </a>
+              <a
+                href="#"
+                className="rounded-md text-[#f1cf69] hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+                aria-label="Twitter"
+              >
+                <Twitter size={24} />
+              </a>
+              <a
+                href="#"
+                className="rounded-md text-[#f1cf69] hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+                aria-label="Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+              <a
+                href="#"
+                className="rounded-md text-[#f1cf69] hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
             </div>
           </div>
 
-          {/* Grievance Officer Section */}
-          <div style={{ flex: "1 1 250px" }}>
-            <h4 style={{ color: "#f1cf69", marginBottom: "16px" }}>
-              Grievance Officer
-            </h4>
-            <p
-              style={{
-                color: "#dddddd",
-                marginBottom: "8px",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              Amit Mishra
-            </p>
-            <p
-              style={{
-                color: "#dddddd",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <Mail size={16} style={{ marginRight: 8 }} />
-              <a
-                href="mailto:grievance@agribidindia.com"
-                style={{ color: "#f1cf69", textDecoration: "none" }}
-              >
-                grievance@agribidindia.com
-              </a>
-            </p>
-          </div>
-
-          {/* Useful Links Section */}
-          <div style={{ flex: "1 1 180px" }}>
-            <h4 style={{ color: "#f1cf69", marginBottom: "16px" }}>
-              Useful Links
-            </h4>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                  flex: "1 1 45%",
-                }}
-              >
-                {["Home", "FPO", "Market Place", "About Us", "Mandi Price"].map(
-                  (item, idx) => (
-                    <li key={idx} style={{ marginBottom: "10px" }}>
-                      <a
-                        href="#"
-                        style={{ color: "#ffffff", textDecoration: "none" }}
+          {/* Grievance Officer & Useful Links */}
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2">
+            <div>
+              <h4 className="mb-4 text-[#f1cf69]">Grievance Officer</h4>
+              <p className="mb-2 text-gray-300">Amit Mishra</p>
+              <p className="flex items-center text-sm">
+                <Mail size={16} className="mr-2" />
+                <a
+                  href="mailto:grievance@agribidindia.com"
+                  className="text-[#f1cf69] hover:underline focus:underline focus:outline-none"
+                >
+                  grievance@agribidindia.com
+                </a>
+              </p>
+            </div>
+            <div>
+              <h4 className="mb-4 text-[#f1cf69]">Useful Links</h4>
+              <div className="flex gap-8">
+                <ul className="space-y-2">
+                  {usefulLinks1.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        to={link.to}
+                        className="hover:underline focus:underline focus:outline-none"
                       >
-                        {item}
-                      </a>
+                        {link.label}
+                      </Link>
                     </li>
-                  ),
-                )}
-              </ul>
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                  flex: "1 1 45%",
-                }}
-              >
-                {[
-                  {
-                    label: "Privacy Policy",
-                    href: "/privacypolicy",
-                  },
-                  {
-                    label: "T & C",
-                    href: "/tandc",
-                  },
-                  {
-                    label: "Return Policy",
-                    href: "/returnpolicy",
-                  },
-                  {
-                    label: "Shipping Policy",
-                    href: "/shippingpolicy",
-                  },
-                  {
-                    label: "FAQ",
-                    href: "/faq",
-                  },
-                  {
-                    label: "Knowledge Center",
-                    href: "/knowledgecenter",
-                  },
-                ].map((item, idx) => (
-                  <li key={idx} style={{ marginBottom: "10px" }}>
-                    <a
-                      href={item.href}
-                      style={{ color: "#ffffff", textDecoration: "none" }}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                  ))}
+                </ul>
+                <ul className="space-y-2">
+                  {usefulLinks2.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        to={link.to}
+                        className="hover:underline focus:underline focus:outline-none"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
           {/* App Store/Play Store and Newsletter Section */}
-          <div style={{ flex: "1 1 300px" }}>
-            {/* App Store and Play Store Images - Side by Side */}
-            <div
-              style={{
-                display: "flex",
-                gap: "15px",
-                marginBottom: "30px",
-                alignItems: "center",
-              }}
-            >
+          <div className="lg:col-span-1">
+            <div className="mb-8 flex items-center space-x-4">
               <a
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Google Play Store"
+                aria-label="Get it on Google Play"
+                className="rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
               >
                 <img
                   src="/playstore.png"
                   alt="Google Play"
-                  style={{
-                    height: "40px",
-                    width: "auto",
-                    objectFit: "contain",
-                  }}
+                  className="h-10 w-auto object-contain"
                 />
               </a>
               <a
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Apple App Store"
+                aria-label="Download on the App Store"
+                className="rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
               >
                 <img
                   src="/appstore.png"
                   alt="App Store"
-                  style={{
-                    height: "40px",
-                    width: "auto",
-                    objectFit: "contain",
-                  }}
+                  className="h-10 w-auto object-contain"
                 />
               </a>
             </div>
-
-            {/* Newsletter */}
-            <div>
-              <h4 style={{ color: "#f1cf69", marginBottom: "16px" }}>
-                Newsletter
-              </h4>
-              <p style={{ marginBottom: "16px", color: "#cccccc" }}>
-                Sign up now to get daily latest news & updates from us.
-              </p>
-              <form style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+            <h4 className="mb-4 text-[#f1cf69]">Subscribe to our Newsletter</h4>
+            <form>
+              <div className="flex flex-col space-y-4">
                 <input
                   type="email"
-                  placeholder="Email address"
-                  style={{
-                    flex: "1 1 60%",
-                    padding: "10px",
-                    border: "none",
-                    borderRadius: "4px",
-                    fontSize: "14px",
-                  }}
+                  placeholder="Your email address"
+                  aria-label="Your email address"
+                  className="w-full rounded-md border border-gray-500 bg-transparent px-4 py-2 text-white placeholder-gray-400 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none"
                 />
                 <button
                   type="submit"
-                  style={{
-                    padding: "10px 20px",
-                    backgroundColor: "#f1cf69",
-                    color: "#334b35",
-                    border: "none",
-                    borderRadius: "4px",
-                    fontWeight: "bold",
-                    cursor: "pointer",
-                  }}
+                  className="rounded-md bg-[#f1cf69] px-6 py-2 font-semibold text-[#334b35] transition-colors hover:bg-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800"
                 >
-                  Go
+                  Subscribe
                 </button>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
+        </div>
+
+        <div className="mt-16 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+          <p>
+            &copy; {new Date().getFullYear()} Agribid Private Limited. All
+            Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
