@@ -101,7 +101,7 @@ const BlogSection = () => {
               prevEl: prevRef.current,
               nextEl: nextRef.current,
             }}
-            onBeforeInit={(swiper) => {
+            onBeforeInit={(swiper: any) => {
               swiper.params.navigation.prevEl = prevRef.current;
               swiper.params.navigation.nextEl = nextRef.current;
             }}
