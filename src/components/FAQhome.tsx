@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-//import Image from "next/image";
 
 const faqData = [
   {
@@ -32,34 +31,6 @@ const faqData = [
       "Organic address a range of simply application and infrastructure this of passages of available, but the majority have suffered poor alteration in some form.",
     isOpen: false,
   },
-  {
-    id: "05",
-    question: "Refreshing to get such a touch ?",
-    answer:
-      "Organic address a range of simply application and infrastructure this of passages of available, but the majority have suffered poor alteration in some form.",
-    isOpen: false,
-  },
-  {
-    id: "06",
-    question: "Refreshing to get such a touch ?",
-    answer:
-      "Organic address a range of simply application and infrastructure this of passages of available, but the majority have suffered poor alteration in some form.",
-    isOpen: false,
-  },
-  {
-    id: "07",
-    question: "Refreshing to get such a touch ?",
-    answer:
-      "Organic address a range of simply application and infrastructure this of passages of available, but the majority have suffered poor alteration in some form.",
-    isOpen: false,
-  },
-  {
-    id: "08",
-    question: "Refreshing to get such a touch ?",
-    answer:
-      "Organic address a range of simply application and infrastructure this of passages of available, but the majority have suffered poor alteration in some form.",
-    isOpen: false,
-  },
 ];
 
 const FAQSection = () => {
@@ -76,23 +47,23 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white py-[120px]">
+    <section className="relative overflow-hidden bg-white py-[80px]">
       {/* Decorative leaf elements */}
       <div className="absolute -bottom-16 -left-16 z-0 h-48 w-48 opacity-30">
         <img src="/images/about-2-shape-2.png" alt="Decorative leaf" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
           {/* FAQ Content */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {/* Header */}
             <div>
               <div className="mb-2 flex items-center gap-2">
                 <span className="text-xl text-[#44a05b]">🌿</span>
                 <p className="text-lg font-bold text-[#44a05b]">FAQ US</p>
               </div>
-              <h2 className="text-4xl leading-tight font-bold text-[#122f2a] md:text-5xl">
+              <h2 className="text-3xl leading-tight font-bold text-[#122f2a] md:text-4xl">
                 We Are Any Question Faq
                 <br />
                 Please Organic Food
@@ -117,9 +88,9 @@ const FAQSection = () => {
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="flex w-full items-center justify-between px-6 py-4 text-left focus:outline-none"
+                    className="flex w-full items-center justify-between px-4 py-3 text-left focus:outline-none"
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3">
                       <span
                         className={`text-xl font-bold ${
                           faq.isOpen ? "text-[#44a05b]" : "text-gray-400"
@@ -141,7 +112,9 @@ const FAQSection = () => {
                       }`}
                     >
                       <svg
-                        className={`h-6 w-6 ${faq.isOpen ? "text-[#44a05b]" : "text-gray-400"}`}
+                        className={`h-5 w-5 ${
+                          faq.isOpen ? "text-[#44a05b]" : "text-gray-400"
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -163,8 +136,8 @@ const FAQSection = () => {
                         : "max-h-0 opacity-0"
                     }`}
                   >
-                    <div className="px-6 pb-4">
-                      <div className="pl-8">
+                    <div className="px-4 pb-3">
+                      <div className="pl-6">
                         <p className="leading-[1.75] text-[#636363]">
                           {faq.answer}
                         </p>
@@ -178,27 +151,23 @@ const FAQSection = () => {
 
           {/* Image Section */}
           <div className="relative flex h-full items-center justify-center">
-            <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative max-h-[450px] w-full overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src="/faq-home.jpg"
                 alt="Farmer with organic vegetables"
-                width={600}
-                height={700}
                 className="h-full w-full object-cover"
+                style={{ maxHeight: "450px" }}
               />
 
               {/* Floating question mark icon */}
-              <div className="absolute top-4 right-4 z-20 flex h-24 w-24 items-center justify-center rounded-full bg-[#44a05b] shadow-lg">
-                <span className="text-4xl font-bold text-white">?</span>
+              <div className="absolute top-4 right-4 z-20 flex h-16 w-16 items-center justify-center rounded-full bg-[#44a05b] shadow-lg">
+                <span className="text-2xl font-bold text-white">?</span>
               </div>
 
               {/* FAQ badge */}
-              <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3 rounded-lg bg-white p-4 shadow-xl">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fd7e14] text-xl font-extrabold text-white">
-                  F
-                </div>
+              <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3 rounded-lg bg-white p-3 shadow-xl">
                 <div>
-                  <h4 className="text-2xl font-bold text-gray-800">AQ</h4>
+                  <h4 className="text-xl font-bold text-gray-800">FAQ</h4>
                 </div>
               </div>
             </div>
