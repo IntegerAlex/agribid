@@ -43,14 +43,11 @@ const ProjectCarousel = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-10 text-center">
-        <div className="mb-3 inline-block">
-          <img src="/agribid.png" alt="icon" className="h-20 w-48" />
-        </div>
         <p className="text-sm tracking-wider text-green-600 uppercase">
           Recently completed work
         </p>
         <h2 className="mt-2 text-4xl font-bold text-gray-800">
-          Explore Our Solutions
+          Explore Our Projects
         </h2>
       </div>
 
