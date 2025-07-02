@@ -9,7 +9,7 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-  { label: "Market Place", to: "/market" },
+  { label: "Market Place", to: "/marketplace" },
   { label: "Mandi Price", to: "/mandi" },
   {
     label: "Partner with us",

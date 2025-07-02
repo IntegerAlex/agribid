@@ -12,7 +12,7 @@ import {
 const usefulLinks1 = [
   { label: "Home", to: "/" },
   { label: "FPO", to: "/partnerwithus/fpo" },
-  { label: "Market Place", to: "/market" },
+  { label: "Market Place", to: "/marketplace" },
   { label: "About Us", to: "/about/whoarewe" },
   { label: "Mandi Price", to: "/mandi" },
 ];

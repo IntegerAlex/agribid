@@ -7,6 +7,7 @@ import Projects from "../components/Projects";
 // import MeetourTeam from "../components/MeetOurTeam";
 import BlogSection from "../components/Blogs";
 import ScrollEffect from "../components/ScrollEffect";
+import FAQSection from "../components/FAQhome";
 export const Route = createFileRoute("/")({
   component: HomeComponent,
 });
@@ -21,6 +22,7 @@ function HomeComponent() {
       {/* <MeetourTeam /> */}
       <ScrollEffect />
       <BlogSection />
+      <FAQSection />
       <Partners />
     </main>
   );

@@ -16,7 +16,10 @@ import { Route as ShippingpolicyImport } from './routes/shippingpolicy'
 import { Route as ReturnpolicyImport } from './routes/returnpolicy'
 import { Route as RegistrationImport } from './routes/registration'
 import { Route as PrivacypolicyImport } from './routes/privacypolicy'
+import { Route as MarketplaceImport } from './routes/marketplace'
 import { Route as LoginImport } from './routes/login'
+import { Route as KnowledgecenterImport } from './routes/knowledgecenter'
+import { Route as FaqImport } from './routes/faq'
 import { Route as IndexImport } from './routes/index'
 import { Route as PartnerwithusPacsImport } from './routes/partnerwithus.pacs'
 import { Route as PartnerwithusFpoImport } from './routes/partnerwithus.fpo'
@@ -61,9 +64,27 @@ const PrivacypolicyRoute = PrivacypolicyImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const MarketplaceRoute = MarketplaceImport.update({
+  id: '/marketplace',
+  path: '/marketplace',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const LoginRoute = LoginImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const KnowledgecenterRoute = KnowledgecenterImport.update({
+  id: '/knowledgecenter',
+  path: '/knowledgecenter',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const FaqRoute = FaqImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -144,11 +165,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqImport
+      parentRoute: typeof rootRoute
+    }
+    '/knowledgecenter': {
+      id: '/knowledgecenter'
+      path: '/knowledgecenter'
+      fullPath: '/knowledgecenter'
+      preLoaderRoute: typeof KnowledgecenterImport
+      parentRoute: typeof rootRoute
+    }
     '/login': {
       id: '/login'
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof LoginImport
+      parentRoute: typeof rootRoute
+    }
+    '/marketplace': {
+      id: '/marketplace'
+      path: '/marketplace'
+      fullPath: '/marketplace'
+      preLoaderRoute: typeof MarketplaceImport
       parentRoute: typeof rootRoute
     }
     '/privacypolicy': {
@@ -263,7 +305,10 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/faq': typeof FaqRoute
+  '/knowledgecenter': typeof KnowledgecenterRoute
   '/login': typeof LoginRoute
+  '/marketplace': typeof MarketplaceRoute
   '/privacypolicy': typeof PrivacypolicyRoute
   '/registration': typeof RegistrationRoute
   '/returnpolicy': typeof ReturnpolicyRoute
@@ -283,7 +328,10 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/faq': typeof FaqRoute
+  '/knowledgecenter': typeof KnowledgecenterRoute
   '/login': typeof LoginRoute
+  '/marketplace': typeof MarketplaceRoute
   '/privacypolicy': typeof PrivacypolicyRoute
   '/registration': typeof RegistrationRoute
   '/returnpolicy': typeof ReturnpolicyRoute
@@ -304,7 +352,10 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/faq': typeof FaqRoute
+  '/knowledgecenter': typeof KnowledgecenterRoute
   '/login': typeof LoginRoute
+  '/marketplace': typeof MarketplaceRoute
   '/privacypolicy': typeof PrivacypolicyRoute
   '/registration': typeof RegistrationRoute
   '/returnpolicy': typeof ReturnpolicyRoute
@@ -326,7 +377,10 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/faq'
+    | '/knowledgecenter'
     | '/login'
+    | '/marketplace'
     | '/privacypolicy'
     | '/registration'
     | '/returnpolicy'
@@ -345,7 +399,10 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/faq'
+    | '/knowledgecenter'
     | '/login'
+    | '/marketplace'
     | '/privacypolicy'
     | '/registration'
     | '/returnpolicy'
@@ -364,7 +421,10 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/faq'
+    | '/knowledgecenter'
     | '/login'
+    | '/marketplace'
     | '/privacypolicy'
     | '/registration'
     | '/returnpolicy'
@@ -385,7 +445,10 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FaqRoute: typeof FaqRoute
+  KnowledgecenterRoute: typeof KnowledgecenterRoute
   LoginRoute: typeof LoginRoute
+  MarketplaceRoute: typeof MarketplaceRoute
   PrivacypolicyRoute: typeof PrivacypolicyRoute
   RegistrationRoute: typeof RegistrationRoute
   ReturnpolicyRoute: typeof ReturnpolicyRoute
@@ -405,7 +468,10 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FaqRoute: FaqRoute,
+  KnowledgecenterRoute: KnowledgecenterRoute,
   LoginRoute: LoginRoute,
+  MarketplaceRoute: MarketplaceRoute,
   PrivacypolicyRoute: PrivacypolicyRoute,
   RegistrationRoute: RegistrationRoute,
   ReturnpolicyRoute: ReturnpolicyRoute,
@@ -434,7 +500,10 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/faq",
+        "/knowledgecenter",
         "/login",
+        "/marketplace",
         "/privacypolicy",
         "/registration",
         "/returnpolicy",
@@ -455,8 +524,17 @@ export const routeTree = rootRoute
     "/": {
       "filePath": "index.tsx"
     },
+    "/faq": {
+      "filePath": "faq.tsx"
+    },
+    "/knowledgecenter": {
+      "filePath": "knowledgecenter.tsx"
+    },
     "/login": {
       "filePath": "login.tsx"
+    },
+    "/marketplace": {
+      "filePath": "marketplace.tsx"
     },
     "/privacypolicy": {
       "filePath": "privacypolicy.tsx"
