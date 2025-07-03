@@ -11,7 +11,7 @@ dist/
 .vercel
 .netlify
 .wrangler
-
+/v3/
 # IDE
 .vscode/*
 !.vscode/extensions.json

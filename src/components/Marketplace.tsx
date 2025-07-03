@@ -5,17 +5,17 @@ const Marketplace = () => {
   const cards = [
     {
       image: "/kb.jpg",
-      title: "Best Quality<br/>Standards",
+      title: "Kendriya Bhandar",
       link: "#",
     },
     {
       image: "/nccf.jpg",
-      title: "Fresh & Organic<br/>Produce",
+      title: "NCCF Buy Now",
       link: "#",
     },
     {
       image: "/auction-image.jpg",
-      title: "Fair Price<br/>Guarantee",
+      title: "Auction",
       link: "#",
     },
     {

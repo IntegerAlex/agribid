@@ -11,31 +11,31 @@ const projects = [
     title: "AI Powered Digital Marketplace",
     description:
       "Our core marketplace enables real-time online auctions, connecting farmers with national buyers via a transparent, bid-driven portal. Backend quality checks ensure verified produce and trustworthy digital bidding.",
-    icon: Bot,
+    image: "/Digital-market-place.jpeg",
   },
   {
     title: "Smart IoT Devices for Precision Farming",
     description:
       "We're piloting IoT sensor networks—soil moisture, ambient, and plant health monitors—that feed real-time field data into our AI analytics engine, enabling precision irrigation and nutrient management.",
-    icon: Cpu,
+    image: "/iot-device.jpeg",
   },
   {
     title: "Satellite & Weather Driven Insights",
     description:
       "Our platform integrates crop health indices and hyper-local weather forecasting. AI-generated alerts help predict yield, disease risks, and optimal harvest timing, aligning with modern agri-tech advancements.",
-    icon: Satellite,
+    image: "/whether-station.jpeg",
   },
   {
     title: "Contract Farming & Traceable Procurement",
     description:
       "We facilitate contract farming programs with FPOs and processors. Our platform offers smart contracts, traceability, and AI-driven logistics planning for reliable sourcing and transparent pricing.",
-    icon: FileText,
+    image: "/contaract-farming.jpeg",
   },
   {
     title: "AI Enabled Agri Financing",
     description:
       "Our embedded agrifinance engine leverages AI for credit scoring, analyzing farmer transaction history, yield forecasts, and IoT data to extend working capital, financing, and bridge loans at competitive rates.",
-    icon: Landmark,
+    image: "/agri-financing.jpeg",
   },
 ];
 
@@ -72,17 +72,21 @@ const ProjectCarousel = () => {
               className="group relative h-[350px] overflow-hidden rounded-xl shadow-lg"
             >
               {/* Background with Icon */}
-              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-                <project.icon className="h-24 w-24 text-gray-400 transition-transform duration-500 group-hover:scale-110" />
+              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-green-400/10 to-green-400/20">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover"
+                />
               </div>
 
               {/* Hover Overlay with Slide-Up Effect */}
-              <div className="absolute right-0 bottom-0 left-0 flex h-full translate-y-full transform-gpu flex-col justify-end bg-gradient-to-t from-black/90 via-black/80 to-transparent p-6 text-left transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+              <div className="absolute right-0 bottom-0 left-0 flex h-full translate-y-full transform-gpu flex-col justify-end bg-gradient-to-t from-[#334b35]/90 via-[#334b35]/80 to-transparent p-6 text-left transition-transform duration-500 ease-in-out group-hover:translate-y-0">
                 <div>
                   <h3 className="mb-2 text-xl font-bold text-white">
                     {project.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-gray-200">
+                  <p className="text-sm leading-relaxed text-[#f1cf69]">
                     {project.description}
                   </p>
                 </div>
