@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 const Marketplace = () => {
   const cards = [
@@ -16,7 +17,7 @@ const Marketplace = () => {
     {
       image: "/auction-image.jpg",
       title: "Auction",
-      link: "#",
+      link: "/auction",
     },
     {
       image: "/fertilizers.jpeg",
@@ -66,25 +67,46 @@ const Marketplace = () => {
               {/* Title Overlay */}
               <div className="absolute right-0 bottom-0 left-0 bg-[#334b35]/80 p-5 text-center transition-all duration-300 group-hover:bg-[#334b35]/90">
                 <h3 className="text-xl leading-tight font-semibold text-white">
-                  <a href={card.link} className="hover:text-[#f1cf69]">
-                    {card.title.split("<br/>").map((line, i) => (
-                      <React.Fragment key={i}>
-                        {line}
-                        {i < card.title.split("<br/>").length - 1 && <br />}
-                      </React.Fragment>
-                    ))}
-                  </a>
+                  {card.title === "Auction" ? (
+                    <Link to="/auction" className="hover:text-[#f1cf69]">
+                      {card.title.split("<br/>").map((line, i) => (
+                        <React.Fragment key={i}>
+                          {line}
+                          {i < card.title.split("<br/>").length - 1 && <br />}
+                        </React.Fragment>
+                      ))}
+                    </Link>
+                  ) : (
+                    <a href={card.link} className="hover:text-[#f1cf69]">
+                      {card.title.split("<br/>").map((line, i) => (
+                        <React.Fragment key={i}>
+                          {line}
+                          {i < card.title.split("<br/>").length - 1 && <br />}
+                        </React.Fragment>
+                      ))}
+                    </a>
+                  )}
                 </h3>
               </div>
 
               {/* Arrow Button */}
-              <a
-                href={card.link}
-                aria-label={`Learn more about ${card.title}`}
-                className="absolute right-4 bottom-4 z-10 rounded-full bg-[#f1cf69] p-3 transition-colors hover:bg-[#6d8c54]"
-              >
-                <ArrowRight className="h-5 w-5 text-white" />
-              </a>
+              {card.title === "Auction" ? (
+                <Link
+                  to="/auction"
+                  aria-label={`Learn more about ${card.title}`}
+                  className="absolute right-4 bottom-4 z-10 rounded-full bg-[#f1cf69] p-3 transition-colors hover:bg-[#6d8c54]"
+                >
+                  <ArrowRight className="h-5 w-5 text-white" />
+                </Link>
+              ) : (
+                <a
+                  href={card.link}
+                  aria-label={`Learn more about ${card.title}`}
+                  className="absolute right-4 bottom-4 z-10 rounded-full bg-[#f1cf69] p-3 transition-colors hover:bg-[#6d8c54]"
+                >
+                  <ArrowRight className="h-5 w-5 text-white" />
+                </a>
+              )}
             </div>
           ))}
         </div>
